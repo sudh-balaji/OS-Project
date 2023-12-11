@@ -1,0 +1,16 @@
+// This program loads 100 into the AC register. It then
+// adds -1 to the AC register 100 times until the AC 
+// register is 0. Then it writes the value 2 to
+// memory address 150.
+//
+load_const -1
+move_to_mbr
+load_const 100
+add
+ifgo 3
+load_const 150
+move_to_mar
+load_const 2
+move_to_mbr
+write_at_addr
+exit
